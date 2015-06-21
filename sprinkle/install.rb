@@ -1,8 +1,13 @@
 require 'sprinkle/core'
+require 'sprinkle/imagemagick'
+require 'sprinkle/ruby'
 
 policy :development, roles: :vagrant do
   requires :git
+  requires :essentials
   requires :mc
+  requires :rvm
+  requires :ruby2_1
 end
 
 deployment do
